@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/home"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.home.HomeFragment">
+
+ <androidx.core.widget.NestedScrollView
+     android:layout_width="match_parent"
+     android:layout_height="match_parent"
+     android:fillViewport="true">
+     <RelativeLayout
+         android:layout_width="match_parent"
+         android:layout_height="match_parent"
+         tools:ignore="UselessParent">
+         <TextView
+             android:id="@+id/discover"
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             android:text="Discover"
+             android:textSize="24sp"
+             android:layout_marginTop="15dp"
+             android:layout_marginStart="10dp"
+             android:textStyle="bold"/>
+
+         <TextView
+             android:id="@+id/title"
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             android:layout_below="@+id/discover"
+             android:layout_marginStart="10dp"
+             android:layout_marginTop="5dp"
+             android:text="Laundry Services"
+             android:textColor="@color/black"
+             android:textSize="24sp"
+             android:textStyle="bold" />
+          <LinearLayout
+              android:layout_below="@+id/title"
+              android:id="@+id/search_layout"
+              android:layout_width="match_parent"
+              android:layout_height="45dp"
+              android:layout_marginTop="30dp"
+              android:layout_marginStart="15dp"
+              android:layout_marginEnd="15dp"
+              android:layout_marginBottom="10dp"
+              android:orientation="vertical"
+              android:background="@drawable/bg_search"
+              android:gravity="center_horizontal"
+              android:layout_toStartOf="@id/img_btn">
+
+              <androidx.appcompat.widget.SearchView
+                  android:id="@+id/searchView"
+                  android:layout_width="320dp"
+                  android:layout_height="wrap_content"
+                  app:iconifiedByDefault="false"
+                  app:queryBackground="@android:color/transparent"
+                  app:queryHint="Search Here" />
+
+
+          </LinearLayout>
+
+         <ImageButton
+             android:id="@+id/img_btn"
+             android:layout_width="50dp"
+             android:layout_height="45dp"
+             android:layout_below="@+id/title"
+             android:layout_alignParentEnd="true"
+             android:layout_marginTop="30dp"
+             android:layout_marginEnd="15dp"
+             android:background="@drawable/bg_search"
+             android:src="@drawable/ic_baseline_list_24"/>
+
+         <TextView
+             android:id="@+id/choose_services"
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             android:layout_below="@id/img_btn"
+             android:layout_marginStart="15dp"
+             android:layout_marginTop="30dp"
+             android:text="Our Services"
+             android:textColor="@color/black"
+             android:textSize="16sp"
+             android:textStyle="bold" />
+         <LinearLayout
+             android:id="@+id/container_choose_services"
+             android:layout_below="@id/choose_services"
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             android:orientation="horizontal"
+             android:gravity="center_horizontal"
+             android:paddingTop="20dp"
+             android:paddingBottom="20dp"
+             tools:ignore="RtlSymmetry">
+             <RelativeLayout
+                 android:layout_width="70dp"
+                 android:layout_height="wrap_content"
+                 android:layout_marginEnd="15dp"
+                 android:gravity="center_horizontal">
+                 <ImageView
+                     android:id="@+id/image1"
+                     android:layout_width="60dp"
+                     android:layout_height="60dp"
+                     android:layout_centerHorizontal="true"
+                     android:src="@drawable/iron"
+                     tools:ignore="ContentDescription" />
+                 <TextView
+                     android:layout_width="70dp"
+                     android:layout_height="wrap_content"
+                     android:layout_below="@+id/image1"
+                     android:text="Ironing"
+                     android:textSize="11sp"
+                     android:textAlignment="center"
+                     tools:ignore="SmallSp"
+                     android:textColor="@color/black"
+                     android:layout_marginTop="5dp"/>
+
+
+
+             </RelativeLayout>
+             <RelativeLayout
+                 android:layout_width="70dp"
+                 android:layout_height="wrap_content"
+                 android:layout_marginEnd="15dp"
+                 android:gravity="center_horizontal">
+
+                 <ImageView
+                     android:id="@+id/image2"
+                     android:layout_width="60dp"
+                     android:layout_height="60dp"
+                     android:layout_centerHorizontal="true"
+                     android:src="@drawable/washing"
+                     tools:ignore="ContentDescription" />
+                 <TextView
+                     android:layout_width="70dp"
+                     android:layout_height="wrap_content"
+                     android:layout_below="@+id/image2"
+                     android:text="Washing$"
+                     android:textSize="11sp"
+                     android:textAlignment="center"
+                     tools:ignore="SmallSp"
+                     android:textColor="@color/black"
+                     android:layout_marginTop="5dp"/>
+
+
+
+             </RelativeLayout>
+             <RelativeLayout
+                 android:layout_width="70dp"
+                 android:layout_height="wrap_content"
+                 android:layout_marginEnd="15dp"
+                 android:gravity="center_horizontal">
+                 <ImageView
+                     android:id="@+id/image3"
+                     android:layout_width="60dp"
+                     android:layout_height="60dp"
+                     android:layout_centerHorizontal="true"
+                     android:src="@drawable/shirt"
+                     tools:ignore="ContentDescription" />
+                 <TextView
+                     android:layout_width="70dp"
+                     android:layout_height="wrap_content"
+                     android:layout_below="@+id/image3"
+                     android:text="Dry Cleaning"
+                     android:textSize="11sp"
+                     android:textAlignment="center"
+                     tools:ignore="SmallSp"
+                     android:textColor="@color/black"
+                     android:layout_marginTop="5dp"/>
+
+
+
+             </RelativeLayout>
+             <RelativeLayout
+                 android:layout_width="70dp"
+                 android:layout_height="wrap_content"
+                 android:layout_marginEnd="15dp"
+                 android:gravity="center_horizontal">
+                 <ImageView
+                     android:id="@+id/image4"
+                     android:layout_width="60dp"
+                     android:layout_height="60dp"
+                     android:layout_centerHorizontal="true"
+                     android:src="@drawable/more"
+                     tools:ignore="ContentDescription" />
+                 <TextView
+                     android:layout_width="70dp"
+                     android:layout_height="wrap_content"
+                     android:layout_below="@+id/image4"
+                     android:text="More"
+                     android:textSize="11sp"
+                     android:textAlignment="center"
+                     tools:ignore="SmallSp"
+                     android:textColor="@color/black"
+                     android:layout_marginTop="5dp"/>
+
+
+
+             </RelativeLayout>
+
+
+
+
+         </LinearLayout>
+         <RelativeLayout
+             android:layout_below="@+id/container_choose_services"
+             android:layout_width="match_parent"
+             android:layout_height="match_parent"
+             android:background="@drawable/background_rv">
+
+             <TextView
+                 android:id="@+id/recommend"
+                 android:layout_width="match_parent"
+                 android:layout_height="wrap_content"
+                 android:layout_marginStart="15dp"
+                 android:layout_marginTop="30dp"
+                 android:text="Our Company"
+                 android:textColor="@color/black"
+                 android:textSize="20sp"
+                 android:textStyle="bold" />
+
+             <androidx.recyclerview.widget.RecyclerView
+                 android:id="@+id/recycler_view"
+                 android:layout_width="360dp"
+                 android:layout_height="281dp"
+                 android:layout_below="@+id/recommend"
+                 android:layout_marginLeft="30dp"
+                 android:background="@drawable/bg_post1"
+                 android:layout_marginTop="-1dp"
+                 android:layout_marginBottom="15dp"
+                 android:paddingStart="20dp" />
+
+         </RelativeLayout>
+
+
+     </RelativeLayout>
+
+
+
+ </androidx.core.widget.NestedScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
